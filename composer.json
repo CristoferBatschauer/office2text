@@ -1,8 +1,7 @@
 {
-    "name": "your-vendor-name/package-name",
-    "description": "A short description of what your package does",
+    "name": "nsbr/office2text",
+    "description": "Classe para obtenção de documentos office para text",
     "require": {
-        "php": "^7.2",
-        "another-vendor/package": "1.*"
+        "php": "^7.2"
     }
 }
