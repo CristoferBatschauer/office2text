@@ -2,6 +2,7 @@
     "name": "nsbr/office2text",
     "description": "Classe para obtenção de documentos office para text",
     "license": "MIT",
+    "minimum-stability": "dev",
     "require": {
         "php": "^7.0"
     },
