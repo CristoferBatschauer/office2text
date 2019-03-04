@@ -1,1 +1,1 @@
-# Simple class to extract offic docs to text
+# Simple class to extract office docs to text
