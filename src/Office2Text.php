@@ -1,6 +1,6 @@
 <?php
 
-namespace \NS\Office2Text;
+namespace nsbr;
 
 /**
  * conteudo obtido de : https://stackoverflow.com/questions/19503653/how-to-extract-text-from-word-file-doc-docx-xlsx-pptx-php
