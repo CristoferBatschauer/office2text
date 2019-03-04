@@ -1,7 +1,13 @@
 {
     "name": "nsbr/office2text",
     "description": "Classe para obtenção de documentos office para text",
+    "license": "MIT",
     "require": {
-        "php": "^7.2"
+        "php": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
     }
 }
