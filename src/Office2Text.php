@@ -10,7 +10,11 @@ class Office2Text {
 
     private $filename;
 
-    public function __construct($filePath) {
+    public function __construct() {
+        
+    }
+    
+    public function set ($filePath)  {
         $this->filename = $filePath;
     }
 

@@ -1,6 +1,11 @@
 <?php
 
 namespace nsbr;
+
+use DateTime;
+use DateTimeZone;
+use Exception;
+use InvalidArgumentException;
 /**
  * Helper functions
  */
@@ -52,7 +57,7 @@ class Helper {
             $data = $data . 'T' . $hora . '-00:00';
             //Log::logTxt('debug', $data);
         }
-
+        /*
         try {
             $date = new DateTime($data);
             if ($alterarTimeZone) {
@@ -89,6 +94,8 @@ class Helper {
             return $date->format('Y-m-d');
             //return date('Y-m-d', strtotime($data));
         }
+         * 
+         */
     }
 
     public static function formatFone($fone) {
@@ -850,9 +857,9 @@ public static function jsonRecebeFromView(&$dados, &$campoJson) {
         $year = explode('-', $date)[0];
         $d = Helper::formatDate($date, 'mostrar');
         $link = 'https://api.calendario.com.br/?json=true&ano=' . $year . '&token=Y3Jpc3RvZmVyLmJhdHNjaGF1ZXJAZ21haWwuY29tJmhhc2g9MTMzODY3NTU2';
+        
         if (!Helper::$feriados) {
             Helper::$feriados = json_decode(Helper::curlCall($link)->content, true);
-            Log::logTxt('feriados', Helper::$feriados);
         }
         foreach (Helper::$feriados as $item) {
             if (Helper::compareString($item['date'], $d)) {
